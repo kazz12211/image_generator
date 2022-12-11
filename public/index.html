@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+
+    <script src="js/main.js" defer></script>
+    <title>OpenAI 画像生成</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h2>OpenAIを使った 画像生成</h2>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="https://beta.openai.com/docs" target="_blank"
+                >OpenAI API ドキュメント</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <div class="form-control">
+            <label for="prompt">画像の記述</label>
+            <input type="text" id="prompt" placeholder="テキストを入力" />
+          </div>
+          <!-- size -->
+          <div class="form-control">
+            <label for="size">画像サイズ</label>
+            <select name="size" id="size">
+              <option value="small">小</option>
+              <option value="medium" selected>中</option>
+              <option value="large">大</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">生成</button>
+        </form>
+      </section>
+
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
+
+    <div class="spinner"></div>
+  </body>
+</html>
